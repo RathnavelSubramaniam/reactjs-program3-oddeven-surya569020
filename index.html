@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Odd or Even using Arrow Function</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+
+<title>Document</title>
+
 </head>
-<body>
 
-    <h2>Odd or Even Checker</h2>
+<body 
 
-    <label>Enter a Number:</label>
-    <input type="number" id="number">
-
-    <button onclick=" ">Check</button>
-
-    <h3 id="result"></h3>
-
-    <script src="script.js"></script>
+<p id="result"></p>
 
 </body>
+
+<script>
+const Students = [
+
+{ name: "Alice", age: 20, grade: "A"},
+
+{ name: "Bob", age: 21, grade: "B+"},
+
+{ name: "Charlie", age: 19, grade: "A+"}
+
+];
+
+const StudentsInfo = Students.map(({ name, age, grade }) => { 
+    return` <p>Name: ${name}, Age: ${age}, Grade: ${grade} <p>`;
+    });
+
+document.getElementById("result").innerHTML = StudentsInfo.join(" ");
+
+</script>
 </html>
+
